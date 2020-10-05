@@ -36,8 +36,6 @@ mqttc.on_connect = on_connect
 mqttc.username_pw_set(username=broker_username, password=broker_password)
 mqttc.connect(broker_url, broker_port, broker_timeout)
 
-print("MQTT to HTTP sender")
-
 # Topic 1 - device1/topic1
 def on_message_topic1(mosq, obj, msg):
     print "Topic: " + msg.topic
